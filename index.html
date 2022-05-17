@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="index.js" defer></script>
+    <title>Random password generator</title>
+</head>
+
+<body>
+
+    <main>
+        <div id="content">
+            <h1>Generate a <br>
+                <em>random password</em></h1>
+            <p id="text">Never use an insecure password again.</p>
+
+            <div id="middle">
+                <button id="generate-btn"><span class="icon"><i class="material-icons">flash_on</i></span>Generate passwords</button>
+
+                <div>
+                    <label class="container">Include symbols?
+                    <input type="checkbox" id="checkbox-el">
+                    <span class="checkmark"></span>
+                </label>
+
+                    <br>
+                    <div id="centerRange">
+                        <input type="range" id="length-el" value="12" min="8" max="20" oninput="this.nextElementSibling.value = this.value">
+                        <output>12</output>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div id="copied">Copied to clipboard!</div>
+            <div id="password-output">
+                <div> <input type="text" class="pass-input-el" value="..." disabled></div>
+                <div> <input type="text" class="pass-input-el" value="..." disabled></div>
+                <div> <input type="text" class="pass-input-el" value="..." disabled></div>
+                <div> <input type="text" class="pass-input-el" value="..." disabled></div>
+            </div>
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>

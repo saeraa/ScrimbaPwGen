@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Random password generator</title>
+</head>
+
+<body>
+
+
+    <main>
+        <div id="content">
+            <h1>Generate a <br>
+                <em>random password</em></h1>
+            <p id="text">Never use an insecure password again.</p>
+
+            <button id="generate" onclick="generate()"><span class="icon"><i class="material-icons">flash_on</i></span>Generate passwords</button>
+
+
+            <label class="container">Include symbols?
+                <input type="checkbox" onclick="includeSymbols()" id="checkbox">
+                <span class="checkmark"></span>
+              </label>
+
+            <hr>
+
+            <input type="text" id="pw1" value="" disabled></input>
+            <button onclick="pw1btn()">Copy</button>
+            <input type="text" id="pw2" value="" disabled></input>
+            <button onclick="pw2btn()">Copy</button>
+            <input type="text" id="pw3" value="" disabled></input>
+            <button onclick="pw3btn()">Copy</button>
+            <input type="text" id="pw4" value="" disabled></input>
+            <button onclick="pw4btn()">Copy</button>
+        </div>
+
+    </main>
+
+
+
+
+
+    <script src="index.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+/*
+font-family: 'Karla', sans-serif; 
+font-family: 'Inter', sans-serif;
+
+checkbox style:
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox
+
+fonts:
+https://fonts.google.com/
+
+icons:
+https://developers.google.com/fonts/docs/material_icons
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+ :root {
+    --dark2: #472d30;
+    --dark1: #723d46;
+    --medium: #e26d5c;
+    --light1: #ffe1a8;
+    --light2: #c9cba3;
+}
+
+body {
+    background: var(--dark2);
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    max-width: 550px;
+    min-height: 550px;
+    background: var(--light1);
+    margin: 5vh auto;
+    border: 2px solid var(--medium);
+}
+
+#content {
+    width: 100%;
+    padding-top: 4rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin: 0;
+    height: auto;
+}
+
+#password-output {
+    padding: .5rem .5rem 3rem .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#middle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ----------------------------------
+    typography
+   ---------------------------------- */
+
+h1 {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    /* or 100% */
+    letter-spacing: -0.05em;
+    /* night */
+    color: var(--light2);
+}
+
+h1>em {
+    color: var(--medium);
+    font-style: normal;
+}
+
+p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--dark2);
+    margin-bottom: 30px;
+}
+
+
+/* ----------------------------------
+    COPY image
+   ---------------------------------- */
+
+img {
+    max-width: 14px;
+}
+
+
+/* ----------------------------------
+    general and specific button styling 
+   ---------------------------------- */
+button {
+    outline: none;
+    border: 0;
+    background-color: var(--medium);
+    border-radius: 8px;
+    font-size: 14px;
+    position: relative;
+    left: -15px;
+    top: 2px;
+    margin-right: -30px;
+    font-family: 'Inter', sans-serif;
+    padding: 4px 3px 1px 4px;
+}
+
+#generate-btn {
+    left: 0px;
+    margin-right: 0px;
+    padding: 9px 17px 9px 15px;
+    background: var(--medium);
+    box-shadow: 0px 1px 2px var(--dark1);
+    outline: none;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 29px;
+    color: var(--light2);
+    border: 0;
+    min-width: 225px;
+    top: 0px;
+}
+
+/* ----------------------------------
+    FLASH icon on button
+   ---------------------------------- */
+
+.icon {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    left: 0px;
+    top: 5px;
+    margin: 0px 10px 0px 0px;
+}
+
+hr {
+    width: 100%;
+    height: 0px;
+    border: 2px solid var(--dark2);
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    margin-bottom: 25px;
+    margin-top: 35px;
+}
+
+.pass-input-el {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    color: var(--light1);
+    background: var(--dark1);
+    border-radius: 6px;
+    width: 211px;
+    height: 39px;
+    margin: 0px auto;
+}
+
+
+/* ----------------------------------
+    CHECKMARK container 
+   ---------------------------------- */
+
+.container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    line-height: 29px;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: 10px;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--dark1);
+}
+.container:hover input~.checkmark {
+    background-color: var(--dark2);
+}
+.container input:checked~.checkmark {
+    background-color: var(--medium);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked~.checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--light2);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+/* ----------------------------------
+    RANGE input styling
+   ---------------------------------- */
+
+#length-el {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 15px;
+    background: var(--light2);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-left: .8em;
+    border-radius: 2px;
+}
+
+#length-el:hover {
+    opacity: 1;
+}
+
+#length-el::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--dark1);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#length-el::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: var(--dark1);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+output {
+    font-size: .8rem;
+}
+
+#centerRange {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* text copied field */ 
+#copied {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background: var(--medium);
+  /* border: 2px solid var(--light1); */
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px var(--dark1);
+}
+
